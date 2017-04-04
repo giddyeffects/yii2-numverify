@@ -1,0 +1,31 @@
+{
+    "name": "giddyeffects/yii2-numverify",
+    "description": "A Yii2 extension to use the NumVerify API, which offers a full-featured yet simple RESTful JSON API for national and international phone number validation and information lookup for a total of 232 countries around the world",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","numverify","yii2-numverify","giddyeffects","verify number","number verify"],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Gideon Nyaga",
+            "email": "giddyeffects@gmail.com"
+        }
+    ],
+    "support": {
+      "issues": "https://github.com/giddyeffects/yii2-numverify/issues",
+      "source": "https://github.com/giddyeffects/yii2-numverify"
+    },
+    "repositories":[
+        {
+            "type": "git",
+            "url": "https://github.com/giddyeffects/yii2-numverify.git"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "giddyeffects\\numverify\\": ""
+        }
+    }
+}
