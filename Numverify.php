@@ -57,8 +57,10 @@ class Numverify extends Component
     public function verify($num, $options = []) {
         $ch = curl_init();  
         $url = $this->baseUrl."?access_key=$this->access_key&number=$num";
-        if(isset($options['country_code']) && strlen($options['country_code']) === 2 )$url .= "&country_code=".$options['country_code'];
-        else { throw new InvalidParamException("You have specified an invalid Country Code [Required format: 2-letter Code] [Example: KE]");}
+        if(isset($options['country_code'])){
+            if (strlen($options['country_code']) === 2 )$url .= "&country_code=".$options['country_code'];
+            else { throw new InvalidParamException("You have specified an invalid Country Code [Required format: 2-letter Code] [Example: KE]");}
+        }
         if(isset($options['format']))$url .= "&format=".$options['format'];
         curl_setopt($ch,CURLOPT_URL,$url);
         curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
