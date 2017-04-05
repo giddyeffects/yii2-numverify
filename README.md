@@ -10,13 +10,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist giddyeffects/yii2-numverify "*"
+php composer.phar require --prefer-dist "giddyeffects/yii2-numverify":"@dev"
 ```
 
 or add
 
 ```
-"giddyeffects/yii2-numverify": "*"
+"giddyeffects/yii2-numverify": "@dev"
 ```
 
 to the require section of your `composer.json` file.
@@ -54,24 +54,24 @@ if ($response->error){
     echo $response->error->info;
 }
 else{
-    if($response->valid){
+    if($response->valid=='1'){
         echo "Number '$response->number' is valid.";
         echo "<br>";
-        echo "local_format:$response->local_format";
+        echo "local_format: $response->local_format";
         echo "<br>";
-        echo "international_format:$response->international_format";
+        echo "international_format: $response->international_format";
         echo "<br>";
-        echo "country_prefix:$response->country_prefix";
+        echo "country_prefix: $response->country_prefix";
         echo "<br>";
-        echo "country_code:$response->country_code";
+        echo "country_code: $response->country_code";
         echo "<br>";
-        echo "country_name:$response->country_name";
+        echo "country_name: $response->country_name";
         echo "<br>";
-        echo "location:$response->location";
+        echo "location: $response->location";
         echo "<br>";
-        echo "carrier:$response->carrier";
+        echo "carrier: $response->carrier";
         echo "<br>";
-        echo "line_type:$response->line_type";
+        echo "line_type: $response->line_type";
         echo "<br>";
     }
     else{
